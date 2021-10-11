@@ -3,6 +3,5 @@ Rails.application.routes.draw do
 get 'top' => 'homes#top'
 resources :books
 get 'books/:id' => 'books#show'
-get 'books/:id/edit' => 'books#edit'
 
 end
