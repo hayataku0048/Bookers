@@ -11945,3 +11945,241 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for 116.82.176.114 at 2021-10-15 12:01:06 +0000
+Cannot render console from 116.82.176.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 21ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/top" for 116.82.176.114 at 2021-10-15 12:01:14 +0000
+Cannot render console from 116.82.176.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 272ms (Views: 267.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/top" for 116.82.176.114 at 2021-10-15 12:01:16 +0000
+Cannot render console from 116.82.176.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 116.82.176.114 at 2021-10-15 12:01:17 +0000
+Cannot render console from 116.82.176.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Bookers/app/views/books/index.html.erb:38: syntax error, unexpected '<'
+    <%= message );@output_buffer.s...
+    ^
+/home/ec2-user/environment/Bookers/app/views/books/index.html.erb:40: syntax error, unexpected end, expecting ')'
+ end 
+ ^~~
+/home/ec2-user/environment/Bookers/app/views/books/index.html.erb:51: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/Bookers/app/views/books/index.html.erb:53: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/books/index.html.erb:38: syntax error, unexpected '<'
+app/views/books/index.html.erb:40: syntax error, unexpected end, expecting ')'
+app/views/books/index.html.erb:51: syntax error, unexpected ensure, expecting ')'
+app/views/books/index.html.erb:53: syntax error, unexpected end, expecting ')'
+Started GET "/top" for 116.82.176.114 at 2021-10-15 12:03:54 +0000
+Cannot render console from 116.82.176.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 35ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/top" for 116.82.176.114 at 2021-10-15 12:03:55 +0000
+Cannot render console from 116.82.176.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 28ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 116.82.176.114 at 2021-10-15 12:03:56 +0000
+Cannot render console from 116.82.176.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (2.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:14
+  Rendered books/index.html.erb within layouts/application (55.0ms)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 26.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `error' for #<Book::ActiveRecord_Relation:0x00007fc0249177d8>):
+    32: 
+    33: <strong><h2>New book</h2></strong>
+    34: 
+    35: <% if @books.error.any? %>
+    36:   <%= @books.error.count %>error prohibited this book from being saved
+    37:   <%= @books.errors.full_messages.each do |message| %>
+    38:     <%= message %>
+  
+app/views/books/index.html.erb:35:in `_app_views_books_index_html_erb___2965340531514782801_70231611978680'
+Started GET "/top" for 116.82.176.114 at 2021-10-15 12:07:48 +0000
+Cannot render console from 116.82.176.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/top" for 116.82.176.114 at 2021-10-15 12:08:03 +0000
+Cannot render console from 116.82.176.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 247ms (Views: 242.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 116.82.176.114 at 2021-10-15 12:08:05 +0000
+Cannot render console from 116.82.176.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:14
+  Rendered books/index.html.erb within layouts/application (272.6ms)
+Completed 500 Internal Server Error in 280ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `books' for #<#<Class:0x0000000004515a28>:0x0000000004606590>
+Did you mean?  @books):
+    32: 
+    33: <strong><h2>New book</h2></strong>
+    34: 
+    35: <% if books.error.any? %>
+    36:   <%= books.error.count %>error prohibited this book from being saved
+    37:   <%= books.errors.full_messages.each do |message| %>
+    38:     <%= message %>
+  
+app/views/books/index.html.erb:35:in `_app_views_books_index_html_erb__510907919823803828_36079380'
+Started GET "/top" for 116.82.176.114 at 2021-10-15 12:10:03 +0000
+Cannot render console from 116.82.176.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 276ms (Views: 270.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/top" for 116.82.176.114 at 2021-10-15 12:10:04 +0000
+Cannot render console from 116.82.176.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 116.82.176.114 at 2021-10-15 12:10:05 +0000
+Cannot render console from 116.82.176.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:14
+  Rendered books/index.html.erb within layouts/application (14.6ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `error' for #<Book::ActiveRecord_Relation:0x00000000055f77b0>):
+    32: 
+    33: <strong><h2>New book</h2></strong>
+    34: 
+    35: <% if @books.error.any? %>
+    36:   <%= @books.error.count %>error prohibited this book from being saved
+    37:   <%= @books.errors.full_messages.each do |message| %>
+    38:     <%= message %>
+  
+app/views/books/index.html.erb:35:in `_app_views_books_index_html_erb__2186357598982605396_45096040'
+Started GET "/top" for 116.82.176.114 at 2021-10-15 12:13:38 +0000
+Cannot render console from 116.82.176.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 269ms (Views: 263.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 116.82.176.114 at 2021-10-15 12:13:40 +0000
+Cannot render console from 116.82.176.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:14
+  Rendered books/index.html.erb within layouts/application (15.1ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `error' for #<Book::ActiveRecord_Relation:0x0000000005652c00>):
+    32: 
+    33: <strong><h2>New book</h2></strong>
+    34: 
+    35: <% if @books.error.any? %>
+    36:   <%= @books.error.count %>error prohibited this book from being saved
+    37:   <%= @books.errors.full_messages.each do |message| %>
+    38:     <%= message %>
+  
+app/views/books/index.html.erb:35:in `_app_views_books_index_html_erb___3220228439782610089_45271360'
+Started GET "/top" for 116.82.176.114 at 2021-10-15 12:31:14 +0000
+Cannot render console from 116.82.176.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 274ms (Views: 269.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/top" for 116.82.176.114 at 2021-10-15 12:31:17 +0000
+Cannot render console from 116.82.176.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 116.82.176.114 at 2021-10-15 12:31:19 +0000
+Cannot render console from 116.82.176.114! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:14
+  Rendered books/index.html.erb within layouts/application (18.1ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `error' for #<Book::ActiveRecord_Relation:0x0000000004fff880>):
+    32: 
+    33: <strong><h2>New book</h2></strong>
+    34: 
+    35: <% if @books.error.any? %>
+    36:   <%= @books.error.count %>error prohibited this book from being saved
+    37:   <%= @books.errors.full_messages.each do |message| %>
+    38:     <%= message %>
+  
+app/views/books/index.html.erb:35:in `_app_views_books_index_html_erb__757061614032409464_41959020'
